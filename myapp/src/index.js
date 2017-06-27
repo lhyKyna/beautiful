@@ -5,6 +5,8 @@ import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 import {Router,Route,IndexRoute,hashHistory} from 'react-router';
 import Home from './Home'
+import TabList from './TabList';
+
 
 ReactDOM.render(
 	<Router history={hashHistory}>

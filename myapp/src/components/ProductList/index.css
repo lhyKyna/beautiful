@@ -1,0 +1,75 @@
+#wrapper{
+	position: absolute;
+	top: 1.1rem;
+	left: 0;
+}
+ul,li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.product-list{
+	overflow: hidden;
+	position: relative;
+	width: 100vw;
+}
+.product-list li{
+	float: left;
+	box-sizing: border-box;
+	overflow: hidden;
+	width: 50%;	
+	background: url(https://s10.mogucdn.com/mlcdn/c45406/170609_3jaij6bl7lcje0462fl424g5glad1_80x80.png) center center no-repeat;
+	margin-bottom: 0.2rem;
+}
+.product-list li a{
+	display: block;
+	position: relative;
+	width: 96%;
+	margin: 0 0 4% 2%;
+	background: #fff;
+	color: #666;
+}
+.product-list img{
+	height: 4rem;
+	width: 100%;
+}
+.product-list p{
+	display: block;
+    width: 100%;
+    margin: 0;
+    font-size: 0.22rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: .34rem;
+    color: #666;
+}
+
+.product-list .goods_info{
+	text-align: center;
+	height: 0.24rem;
+	overflow: hidden;
+	font-size: 0;
+}
+.product-list .goods_info .price_info{
+	color: #FF3366;
+	text-align: center;
+	font-size: 0.2rem;
+	margin-right: 0.2rem;
+	line-height: 1;
+}
+.product-list .goods_info .fav_num{
+	color: #999;
+	font-size: 0.2rem;
+	line-height: 1;
+}
+.product-list .goods_info .start_icon{
+	display: inline-block;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAWCAQAAACBf8+OAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfgBQsKGyhUZV/lAAACFElEQVQ4y4WST0hUURSHv/N00tBSiiTEbDMuJA0KsTAmKkLMpHAT1ASVNO9BbVsMLmoWUhCtrM0bp0QpAg0pQsWNIOhqEELFqBn7Y4JRUU5ZTYwzp8Wo5XuCd3XvOd/9cc7vHGGd07U9eVYmzRF3RtyhgbwPo9SISnPgmTNnuPE5kxoSKpn2nk0b4p35BIGLTFG+0LIhnrK0VMatpxICbXXqO/CezRoEQhDokwl2JQLrttpTuOAVr1bg0xMSNWsBws3axye6jHgm5olfmhMFUaPjJn4t+0+h0RwEUAmPs281mmSUVrHP8QgkyQxxjRMzYoHhFcQul4Pi1Qr14mUnMJ0r3xV+GfWXx9yWWrPMLn/0yBM9RUIg/FD9LBqn/6m6zU31ahMJ47ABxRfoolD77ZPrw90FqX5t4gvHAhOSbarjnl4hhd/qdcJ2kQxoHfOe4y3Ty76LmlflNh55HNntxOWu1sl7fC3Ta8ZUdl3SUPrRVcs88MCacUx1rlJzeN34x6U+CVrlWgLZC0yuVlzfXZK96RRQ7cIzVSt4pMGOMpR8Y9+KbIOylyxJRWe+c8WqQafso+Gx9CA1sqAFBNNv7dDXPIlpTrrSiZeAtDGsdfKZa8WlUitDbOXGz3daDOkdWSh3tfYXul/38M24U9R+ZhGI0hA5lGnTI8DvnFdrFhjub1k6b/zIPLcSjjEdEB8jZjT7+gvlxMINFm2JJAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxNi0wNS0xMVQxMDoyNzo0MCswODowMHmNt/wAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTYtMDUtMTFUMTA6Mjc6NDArMDg6MDAI0A9AAAAAAElFTkSuQmCC") no-repeat;
+    background-size: contain;
+    width: .23rem;
+    height: .22rem;
+    margin-right: 0.07rem;
+    vertical-align: -0.01rem;
+}
