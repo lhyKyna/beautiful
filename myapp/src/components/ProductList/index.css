@@ -1,7 +1,7 @@
 #wrapper{
-	position: absolute;
+/* 	position: absolute;
 	top: 1.1rem;
-	left: 0;
+	left: 0; */
 }
 ul,li{
 	margin: 0;
@@ -13,6 +13,7 @@ ul,li{
 	overflow: hidden;
 	position: relative;
 	width: 100vw;
+	background: #fff;
 }
 .product-list li{
 	float: left;
