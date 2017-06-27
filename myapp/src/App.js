@@ -34,9 +34,9 @@ class App extends Component {
 	  .then(function(response) {
 	    return response.json()
 	  }).then(function(json) {
-	    console.log(json)
+	    //console.log(json)
 	  }).catch(function(ex) {
-	    console.log('parsing failed', ex)
+	   // console.log('parsing failed', ex)
 	  })
  //    fetch("/jsonp/multiget/3?pids=5868%2C6348%2C20114%2C13730%2C42287&callback=jsonp5868_6348_20114_13730_42287",{ dataType: "jsonp"})
  //    .then(function(res){
