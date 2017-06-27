@@ -7,6 +7,8 @@ import {Router,Route,IndexRoute,browserHistory} from 'react-router';
 import Home from './Home'
 import Kind from './kind'
 import KindInfo from './kindInfo'
+import TabList from './TabList'
+
 
 ReactDOM.render(
 	<Router history={browserHistory}>

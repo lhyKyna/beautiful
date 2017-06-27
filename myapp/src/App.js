@@ -13,39 +13,6 @@ class App extends Component {
       hidden: false,
     };
   }
-   componentDidMount() {
-   //  // simulate img loading
-   //  setTimeout(() => {
-   //    this.setState({
-   //      data: ['AiyWuByWklrrUDlFignR', 'TekJlZRVCjLFexlOCuWn', 'IJOtIlfsYdTyaDTRVrLI'],
-   //    });
-   //  }, 100);
-    // $.ajax({
-    // 		url: 'http://mce.mogucdn.com/jsonp/multiget/3?pids=5868%2C6348%2C20114%2C13730%2C42287&callback',
-    // 		type: 'post',
-    // 		dataType:"jsonp",
-    // 		data: {},
-    // 		success: function (data) {
-    // 			console.log(data)
-    // 		}
-    // 	});
-    var url = "http://mce.mogucdn.com/jsonp/multiget/3?pids=5868%2C6348%2C20114%2C13730%2C42287&callback"
-    fetchJsonp(url)
-	  .then(function(response) {
-	    return response.json()
-	  }).then(function(json) {
-	    console.log(json)
-	  }).catch(function(ex) {
-	    console.log('parsing failed', ex)
-	  })
- //    fetch("/jsonp/multiget/3?pids=5868%2C6348%2C20114%2C13730%2C42287&callback=jsonp5868_6348_20114_13730_42287",{ dataType: "jsonp"})
- //    .then(function(res){
- //    	eval(res)
- //    })
- //    .then(data=>{
- //    console.log(data)
-	// })
-  }
 
   render() {
     const hProp = this.state.initialHeight ? { height: this.state.initialHeight } : {};
@@ -140,7 +107,7 @@ class App extends Component {
           selectedIcon={<div style={{
             width: '0.44rem',
             height: '0.44rem',
-            background: 'url(http://s17.mogucdn.com/p2/160802/upload_565i382k0hi45ek6chhj5603d41a8_40x38.png) center center /  0.42rem 0.42rem no-repeat' }}
+            background: 'url(http://s17.mogucdn.com/p1/160811/idid_ifqtkztcgjstazrumezdambqgyyde_38x38.png) center center /  0.42rem 0.42rem no-repeat' }}
           />
           }
           title="我"
