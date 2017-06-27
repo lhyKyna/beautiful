@@ -4,8 +4,10 @@
   "private": true,
   "dependencies": {
     "antd-mobile": "^1.4.0",
+    "jquery": "^3.2.1",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-router": "^2.8.1"
   },
   "devDependencies": {
     "autoprefixer": "7.1.0",
@@ -87,5 +89,14 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "proxy": {
+    "/jsonp": {
+      "target": "http://mce.mogucdn.com/jsonp",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/jsonp": ""
+      }
+    }
   }
 }

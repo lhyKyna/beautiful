@@ -1,57 +1,159 @@
 import React, { Component } from 'react';
-import { NavBar, Icon ,Carousel } from 'antd-mobile';
+import { NavBar, Icon ,Carousel ,TabBar} from 'antd-mobile';
+// import $ from 'jquery'
+import fetchJsonp from 'fetch-jsonp'
+import {Link} from 'react-router';
 import './App.css';
 
 class App extends Component {
-   state = {
-    data: ['', '', ''],
-    initialHeight: 200,
+   constructor(props) {
+    super(props);
+    this.state = {
+      selectedTab: 'blueTab',
+      hidden: false,
+    };
   }
    componentDidMount() {
-    // simulate img loading
-    setTimeout(() => {
-      this.setState({
-        data: ['AiyWuByWklrrUDlFignR', 'TekJlZRVCjLFexlOCuWn', 'IJOtIlfsYdTyaDTRVrLI'],
-      });
-    }, 100);
+   //  // simulate img loading
+   //  setTimeout(() => {
+   //    this.setState({
+   //      data: ['AiyWuByWklrrUDlFignR', 'TekJlZRVCjLFexlOCuWn', 'IJOtIlfsYdTyaDTRVrLI'],
+   //    });
+   //  }, 100);
+    // $.ajax({
+    // 		url: 'http://mce.mogucdn.com/jsonp/multiget/3?pids=5868%2C6348%2C20114%2C13730%2C42287&callback',
+    // 		type: 'post',
+    // 		dataType:"jsonp",
+    // 		data: {},
+    // 		success: function (data) {
+    // 			console.log(data)
+    // 		}
+    // 	});
+    var url = "http://mce.mogucdn.com/jsonp/multiget/3?pids=5868%2C6348%2C20114%2C13730%2C42287&callback"
+    fetchJsonp(url)
+	  .then(function(response) {
+	    return response.json()
+	  }).then(function(json) {
+	    console.log(json)
+	  }).catch(function(ex) {
+	    console.log('parsing failed', ex)
+	  })
+ //    fetch("/jsonp/multiget/3?pids=5868%2C6348%2C20114%2C13730%2C42287&callback=jsonp5868_6348_20114_13730_42287",{ dataType: "jsonp"})
+ //    .then(function(res){
+ //    	eval(res)
+ //    })
+ //    .then(data=>{
+ //    console.log(data)
+	// })
   }
+
   render() {
     const hProp = this.state.initialHeight ? { height: this.state.initialHeight } : {};
     return (
       <div className="App">
-         <NavBar leftContent="back"
-            mode="light"
-            onLeftClick={() => console.log('onLeftClick')}
-            rightContent={[
-              <Icon key="0" type="search" style={{ marginRight: '0.32rem' }} />,
-              <Icon key="1" type="ellipsis" />,
-            ]}
-          >NavBar</NavBar>
-          <Carousel
-          className="my-carousel"
-          autoplay={false}
-          infinite
-          selectedIndex={1}
-          swipeSpeed={35}
-          beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
-          afterChange={index => console.log('slide to', index)}
+         {this.props.children}
+             <TabBar
+        unselectedTintColor="#949494"
+        tintColor="#ff7a9a"
+        barTintColor="white"
+        hidden={this.state.hidden}
+      >
+        <TabBar.Item
+          title="首页"
+          key="首页"
+          icon={<Link to="/home"><div style={{
+            width: '0.44rem',
+            height: '0.44rem',
+            background: 'url(https://s10.mogucdn.com/p2/160802/upload_439ak5453ih43h5d2a109dhe71agg_36x39.png) center center /  0.42rem 0.42rem no-repeat' }}
+          /></Link>
+          }
+          selectedIcon={<div style={{
+            width: '0.44rem',
+            height: '0.44rem',
+           background: 'url(https://s10.mogucdn.com/p2/160802/upload_29e515a6k59k937a3ej3l5e6bfji2_36x39.png) center center /  0.42rem 0.42rem no-repeat' }}
+          />
+          }
+          selected={this.state.selectedTab === 'blueTab'}
+          onPress={() => {
+            this.setState({
+              selectedTab: 'blueTab',
+            });
+          }}
+          data-seed="logId"
+        > 
+        </TabBar.Item>
+       <TabBar.Item
+           icon={<Link to="/home"><div style={{
+            width: '0.44rem',
+            height: '0.44rem',
+            background: 'url(https://s10.mogucdn.com/p2/160802/upload_3egkhdd8460el241d98kcl706ke65_34x34.png) center center /  0.42rem 0.42rem no-repeat' }}
+          /></Link>
+          }
+          selectedIcon={<div style={{
+            width: '0.44rem',
+            height: '0.44rem',
+            background: 'url(https://s10.mogucdn.com/p2/160802/upload_488lbkj7ll3e92bg3ld1kh5k73l87_34x34.png) center center /  0.42rem 0.42rem no-repeat' }}
+          />
+          }
+          title="分类"
+          key="分类"
+          selected={this.state.selectedTab === 'redTab'}
+          onPress={() => {
+            this.setState({
+              selectedTab: 'redTab',
+            });
+          }}
+          data-seed="logId1"
         >
-          {this.state.data.map(ii => (
-            <a href="http://www.baidu.com" key={ii} style={hProp}>
-              <img
-                src={`https://zos.alipayobjects.com/rmsportal/${ii || 'QcWDkUhvYIVEcvtosxMF'}.png`}
-                alt="icon"
-                onLoad={() => {
-                  // fire window resize event to change height
-                  window.dispatchEvent(new Event('resize'));
-                  this.setState({
-                    initialHeight: null,
-                  });
-                }}
-              />
-            </a>
-          ))}
-        </Carousel>
+        </TabBar.Item>
+        <TabBar.Item
+          icon={<Link to="/home"><div style={{
+              width: '0.44rem',
+              height: '0.44rem',
+              background: 'url(https://s10.mogucdn.com/p2/160802/upload_0eabagglh39aggl8jihfakfbf70a9_40x38.png) center center /  0.42rem 0.42rem no-repeat' }}
+            /></Link>
+          }
+          selectedIcon={
+            <div style={{
+              width: '0.44rem',
+              height: '0.44rem',
+              background: 'url(http://s17.mogucdn.com/p2/160802/upload_565i382k0hi45ek6chhj5603d41a8_40x38.png) center center /  0.42rem 0.42rem no-repeat' }}
+            />
+          }
+          title="购物车"
+          key="购物车"
+          selected={this.state.selectedTab === 'greenTab'}
+          onPress={() => {
+            this.setState({
+              selectedTab: 'greenTab',
+            });
+          }}
+        >
+        </TabBar.Item>
+        <TabBar.Item
+          icon={<Link to="/home"><div style={{
+            width: '0.44rem',
+            height: '0.44rem',
+            background: 'url(https://s10.mogucdn.com/p2/160802/upload_5g85l55d280l94lfg678lcleegf5e_38x38.png) center center /  0.42rem 0.42rem no-repeat' }}
+          /></Link>
+          }
+          selectedIcon={<div style={{
+            width: '0.44rem',
+            height: '0.44rem',
+            background: 'url(http://s17.mogucdn.com/p2/160802/upload_565i382k0hi45ek6chhj5603d41a8_40x38.png) center center /  0.42rem 0.42rem no-repeat' }}
+          />
+          }
+          title="我"
+          key="我"
+          selected={this.state.selectedTab === 'yellowTab'}
+          onPress={() => {
+            this.setState({
+              selectedTab: 'yellowTab',
+            });
+          }}
+        >
+        </TabBar.Item>
+      </TabBar>
       </div>
     );
   }
