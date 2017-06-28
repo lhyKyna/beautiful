@@ -1,0 +1,23 @@
+.am-grid {
+  border: 1px solid #ddd;
+}
+.sub-title {
+  	overflow: hidden;
+  	padding: 0.15rem;
+  	background: #fff;
+  	border: none;
+}
+.sub-title span{
+	color: #333;
+    font-size: 0.32rem;
+    font-weight: normal;
+    float: left;
+}
+.am-grid .am-flexbox{
+	height: 2.5rem;
+}
+.am-grid .am-flexbox .am-flexbox-item .am-grid-item-content .am-grid-item-inner-content .am-grid-icon {
+     margin-top:0;
+    width: 70%;
+    height: 65%;
+}

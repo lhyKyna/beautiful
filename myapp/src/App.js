@@ -83,7 +83,7 @@ class App extends Component {
         > 
         </TabBar.Item>
        <TabBar.Item
-           icon={<Link to="/home"><div style={{
+           icon={<Link to="/kind"><div style={{
             width: '0.44rem',
             height: '0.44rem',
             background: 'url(https://s10.mogucdn.com/p2/160802/upload_3egkhdd8460el241d98kcl706ke65_34x34.png) center center /  0.42rem 0.42rem no-repeat' }}
@@ -140,7 +140,7 @@ class App extends Component {
           selectedIcon={<div style={{
             width: '0.44rem',
             height: '0.44rem',
-            background: 'url(http://s17.mogucdn.com/p2/160802/upload_565i382k0hi45ek6chhj5603d41a8_40x38.png) center center /  0.42rem 0.42rem no-repeat' }}
+            background: 'url(http://s17.mogucdn.com/p1/160811/idid_ifqtkztcgjstazrumezdambqgyyde_38x38.png) center center /  0.42rem 0.42rem no-repeat' }}
           />
           }
           title="我"

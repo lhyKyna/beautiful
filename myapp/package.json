@@ -98,6 +98,11 @@
       "pathRewrite": {
         "^/jsonp": ""
       }
+    },
+    "/api": {
+      "target": "http://aura.maizuo.com/api",
+      "changeOrigin": true,
+      "pathRewrite": { "^/api" : "" }
     }
   }
 }

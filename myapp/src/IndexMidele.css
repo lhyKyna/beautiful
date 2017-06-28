@@ -1,0 +1,15 @@
+*{margin: 0;padding: 0;}
+.Home{height: 100vh;width: 100%;overflow-x: hidden;padding-bottom: 200px}
+.Home img{width: 100%;}
+.Home ul li{list-style: none;background: #fff}
+.Home .list{display: flex;padding: 0 10px;margin-bottom: 20px}
+.Home div:nth-of-type(3) .list{margin:0;}
+.Home .list li{width: 200px;padding:10px;}
+.Home .list img{width:100%;}
+.Home .list li p{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;text-align: left}
+.Home .list li p:nth-of-type(1){font-size: 12px;padding: 8px 0}
+.Home .list li p:nth-of-type(2){font-size: 12px;color: #FFAEB9}
+.Home a{display: block;width: 100%;padding: 25px;border-top: 1px solid #ccc;color:#FF69B4;font-size: 12px;background: #fff}
+
+
+
