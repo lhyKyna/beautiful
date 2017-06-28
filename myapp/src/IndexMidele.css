@@ -1,15 +1,27 @@
 *{margin: 0;padding: 0;}
-.Home{height: 100vh;width: 100%;overflow-x: hidden;padding-bottom: 200px}
+body{overflow-x: hidden}
+.Home{height: 100vh;width: 100%;padding-bottom: 1260px;}
 .Home img{width: 100%;}
 .Home ul li{list-style: none;background: #fff}
-.Home .list{display: flex;padding: 0 10px;margin-bottom: 20px}
+.Home .list{background: #fff;
+  padding: 0.2rem;
+  padding-right: 0;
+  min-height: 2rem;
+  overflow: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+  vertical-align: top;}
 .Home div:nth-of-type(3) .list{margin:0;}
-.Home .list li{width: 200px;padding:10px;}
+.Home .list li{ display: inline-block;
+  width: 1.7rem;
+  font-size: 0.2rem;
+  margin-right: 0.2rem;
+  vertical-align: baseline;}
 .Home .list img{width:100%;}
 .Home .list li p{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;text-align: left}
 .Home .list li p:nth-of-type(1){font-size: 12px;padding: 8px 0}
 .Home .list li p:nth-of-type(2){font-size: 12px;color: #FFAEB9}
-.Home a{display: block;width: 100%;padding: 25px;border-top: 1px solid #ccc;color:#FF69B4;font-size: 12px;background: #fff}
+.Home a{display: block;width: 100%;padding: 25px 0;border-top: 1px solid #ccc;color:#FF69B4;font-size: 12px;background: #fff}
 
 
 
