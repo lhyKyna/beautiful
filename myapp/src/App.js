@@ -4,6 +4,7 @@ import { NavBar, Icon ,Carousel ,TabBar} from 'antd-mobile';
 import fetchJsonp from 'fetch-jsonp'
 import {Link} from 'react-router';
 import './App.css';
+import Search from './search'
 
 class App extends Component {
    constructor(props) {
@@ -51,6 +52,7 @@ class App extends Component {
     const hProp = this.state.initialHeight ? { height: this.state.initialHeight } : {};
     return (
       <div className="App">
+          <Search />
          {this.props.children}
              <TabBar
         unselectedTintColor="#949494"

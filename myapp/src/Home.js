@@ -13,12 +13,11 @@ class Home extends Component {
    render() {
    		return(
 		<div className="main">
-			<Search />
-	      <Swiper />
-	      <Glist />
-	      <Time />
-	      <IndexMidele />
-	      <TabList />
+		      <Swiper />
+		      <Glist />
+		      <Time />
+		      <IndexMidele />
+		      <TabList />
 	    </div>
    			)
       
